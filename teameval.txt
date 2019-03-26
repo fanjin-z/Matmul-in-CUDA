@@ -1,0 +1,49 @@
+                       CSE 260, Parallel Computation
+                                (Winter 2019)
+                Department of Computer Science and Engineering
+                     University of California, San Diego
+
+
+		Team Self Evaluation Form, Assignment #2
+
+Each team must submit one copy of this self evaluation form.
+The members of each team should discuss how they
+worked together and what to write for the evaluation.
+
+(1) List the names of your team members:
+
+A: Fanjin Zeng
+
+
+B:
+
+
+
+(2) Estimate how much time each team member devoted to this project, in HOURS.
+
+  	                        A 	       B
+meetings 	  	  	       0
+coding 	  	  	           30
+writeup 	  	  	       3
+planning (alone) 	  	   5
+total (including meetings) 37
+
+
+(3) Describe
+  (a) what the major responsibilities of each team member were;
+  All works is mine.
+  (b) whether or not you completed the assignment;
+  Complete.
+  (c) the major strengths and weaknesses in your team, e.g. how
+      your team worked together;
+      Strength: Can comprehend complex concepts and learn new framework in short period of time.
+      weakness: Can get very emotional frustrated when I can't find the bug.
+
+  (d) the lessons learned from these events;
+    Getting enough rest could definitely improves coding efficient. Many mistakes and bugs are made when I was tired.
+
+  (e) whether and how you plan to change the way your work together and
+  Yes. Get enough rest everyday. 
+
+  (f) anything else that comes to mind.
+  Negative.

@@ -1,0 +1,42 @@
+#!/bin/bash
+# Account name
+#SBATCH -A TG-CCR100030
+# Job name,  will be displayed on the showq command
+#SBATCH -J MMPY-CUDA
+# Filename for standard output 
+# At end of job, it is in directory from which sbatch was invoked
+#SBATCH -o MMPY-CUDA.o%j
+#SBATCH --cpus-per-task=16
+#SBATCH --nodes=1 --ntasks-per-node=1
+#SBATCH -p gpu
+#  The requested wall clock job time limit in HH:MM:SS
+#  Your job will end when it exceeds this time limit
+#SBATCH -t 00:05:00 
+
+export OMP_NUM_THREADS=16
+export KMP_AFFINITY="granularity=core,scatter"
+
+module load cuda
+
+
+# Print out the environment
+printenv
+
+
+date
+
+# Run
+ibrun numactl -l ./mmpy -n 512 -x 1 -y 512 -r 10
+ibrun numactl -l ./mmpy -n 512 -x 1 -y 512 -r 100
+ibrun numactl -l ./mmpy -n 768 -x 1 -y 512 -r 10
+ibrun numactl -l ./mmpy -n 1024 -x 1 -y 512 -r 10
+ibrun numactl -l ./mmpy -n 512 -x 1 -y 512 -r 2 -b
+ibrun numactl -l ./mmpy -n 512 -x 1 -y 512 -r 2 -R
+ibrun numactl -l ./mmpy -n 1024 -x 1 -y 512 -r 2 -R
+# ./mmpy -n 2048 -x 1 -y 512 -h -r 2 -R
+echo ">>> Job Ends"
+
+date
+
+
+date
